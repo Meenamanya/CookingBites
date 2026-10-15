@@ -75,7 +75,7 @@ A full-stack web application for managing restaurant table reservations built wi
 
 ### Prerequisites
 - Node.js (v14 or higher)
-- MongoDB
+- MongoDB atlas
 - npm or yarn
 
 ### Installation
