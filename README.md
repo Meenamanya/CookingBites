@@ -21,10 +21,7 @@ A full-stack web application for managing restaurant table reservations built wi
 
 ## 📁 Project Structure
 ```
-Directory structure:
-└── hariharans24-restaurant-reservation-mern/
-    ├── README.md
-    ├── LICENSE
+
     ├── backend/
     │   ├── app.js
     │   ├── package-lock.json
@@ -149,15 +146,4 @@ We welcome contributions to improve the Restaurant Reservation System! Please fo
 
 Please make sure to update tests as appropriate and adhere to the existing code style.
 
-## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👥 Authors
-
-- **HARIHARANS24** - *Initial work* - [GitHub Profile](https://github.com/HARIHARANS24)
-
-## 🙏 Acknowledgments
-
-- Thanks to all contributors who have helped shape this project
-- Special thanks to the MERN stack community for their excellent documentation and support 
