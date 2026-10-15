@@ -119,7 +119,14 @@ npm run dev
 cd frontend
 npm run dev
 ```
+## How It Works
 
+1. **User Interaction:** Customers visit the CookingBites website and fill out the restaurant reservation form with their details.
+2. **Frontend Processing:** The React.js frontend collects the submitted information and sends a request to the backend API.
+3. **Backend Processing:** The Node.js and Express.js backend receives the reservation request and processes the data.
+4. **Database Storage:** MongoDB Atlas stores the reservation details for future access.
+5. **Response Handling:** The backend returns a response to the frontend, which informs the customer about the result of their reservation submission.
+   
 ## 📚 API Documentation
 
 ### Authentication Endpoints
