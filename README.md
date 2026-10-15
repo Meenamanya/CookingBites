@@ -1,156 +1,159 @@
-# 🍽️ Restaurant Reservation System - MERN Stack
+# 🍽️ CookingBites – Restaurant Reservation System
 
-A full-stack web application for managing restaurant table reservations built with the MERN stack (MongoDB, Express.js, React.js, Node.js).
+CookingBites is a full-stack restaurant reservation web application built using the MERN stack. It provides a user-friendly interface for customers to explore the restaurant website and submit table reservation requests. Reservation details are stored in MongoDB Atlas through a Node.js and Express.js backend.
 
 ## ✨ Features
-- 🔐 User authentication and authorization  
-- 📅 Table reservation management
-- 📊 Admin dashboard 
-- 📱 Responsive design    
-- 🔄 Real-time updates     
-- 📧 Email notifications     
-- 📊 Analytics and reporting
-     
-## 🛠️ Tech Stack   
-- **Frontend**: React.js, Vite, TailwindCSS
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB
-- **Authentication**: JWT
-- **Real-time**: Socket.io
-- **Email**: Nodemailer
+
+- 📅 **Table Reservations:** Submit reservation details through an online form.
+- 🔗 **REST API Integration:** Connects the React frontend with the Express backend.
+- 🗄️ **MongoDB Atlas Integration:** Stores reservation information in a cloud database.
+- 📱 **User-Friendly Interface:** Provides a clean and accessible restaurant website.
+- 🎨 **Custom Branding:** Features the CookingBites restaurant identity.
+- ⚡ **Full-Stack Architecture:** Separates frontend and backend responsibilities.
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React.js, JavaScript, Vite, HTML, CSS
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB Atlas
+- **API:** REST API
+- **Version Control:** Git and GitHub
 
 ## 📁 Project Structure
-```
 
-    ├── backend/
-    │   ├── app.js
-    │   ├── package-lock.json
-    │   ├── package.json
-    │   ├── RESERVATIONS.reservations.json
-    │   ├── server.js
-    │   ├── config/
-    │   │   └── config.env
-    │   ├── controller/
-    │   │   └── reservation.js
-    │   ├── database/
-    │   │   └── dbConnection.js
-    │   ├── middlewares/
-    │   │   └── error.js
-    │   ├── models/
-    │   │   └── reservation.js
-    │   └── routes/
-    │       └── reservationRoute.js
-    └── frontend/
-        ├── README.md
-        ├── index.html
-        ├── package-lock.json
-        ├── package.json
-        ├── vite.config.js
-        ├── public/
-        └── src/
-            ├── App.css
-            ├── App.jsx
-            ├── main.jsx
-            ├── restApi.json
-            ├── components/
-            │   ├── About.jsx
-            │   ├── Footer.jsx
-            │   ├── HeroSection.jsx
-            │   ├── Menu.jsx
-            │   ├── Navbar.jsx
-            │   ├── Qualities.jsx
-            │   ├── Reservation.jsx
-            │   ├── Team.jsx
-            │   └── WhoAreWe.jsx
-            └── Pages/
-                ├── Home/
-                │   └── Home.jsx
-                ├── NotFound/
-                │   └── NotFound.jsx
-                └── Success/
-                    └── Success.jsx
+```text
+CookingBites/
+├── backend/
+│   ├── config/
+│   ├── controller/
+│   ├── database/
+│   ├── middlewares/
+│   ├── models/
+│   ├── routes/
+│   ├── app.js
+│   ├── server.js
+│   └── package.json
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── Pages/
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   ├── main.jsx
+│   │   └── restApi.json
+│   ├── index.html
+│   └── package.json
+├── .gitignore
+├── LICENSE
+└── README.md
 ```
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js (v14 or higher)
-- MongoDB atlas
-- npm or yarn
+
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) and npm
+- A [MongoDB Atlas](https://www.mongodb.com/atlas) account
+- [Git](https://git-scm.com/)
 
 ### Installation
 
-1. Clone the repository
+**1. Clone the repository**
+
 ```bash
-git clone https://github.com/meenamanya/restaurant-reservation-mern.git
-cd restaurant-reservation-mern
+git clone https://github.com/Meenamanya/CookingBites.git
+cd CookingBites
 ```
 
-2. Install backend dependencies
+**2. Install backend dependencies**
+
 ```bash
 cd backend
 npm install
 ```
 
-3. Install frontend dependencies
-```bash
-cd ../frontend
-npm install
+**3. Configure environment variables**
+
+Create a file named `config.env` inside `backend/config/` and add:
+
+```env
+MONGO_URI=your_mongodb_atlas_connection_uri
+PORT=4000
+FRONTEND_URL=http://localhost:5173
 ```
 
-4. Set up environment variables
-```bash
-# Backend (.env)
-MONGODB_URI=your_mongodb_uri
-JWT_SECRET=your_jwt_secret
-PORT=5000
+Replace the placeholder with your own MongoDB Atlas connection URI. Keep your database credentials private and never commit your `config.env` file to GitHub.
 
-# Frontend (.env)
-VITE_API_URL=http://localhost:5000
+**4. Start the backend server**
+
+From the `backend` directory, run:
+
+```bash
+npm start
 ```
 
-5. Start the development servers
-```bash
-# Backend
-cd backend
-npm run dev
+The backend connects to MongoDB Atlas and starts the server on port `4000`.
 
-# Frontend
+**5. Install frontend dependencies**
+
+Open a second terminal and navigate to the project root:
+
+```bash
 cd frontend
+npm install
+```
+
+**6. Start the frontend**
+
+```bash
 npm run dev
 ```
-## How It Works
 
-1. **User Interaction:** Customers visit the CookingBites website and fill out the restaurant reservation form with their details.
+Open the local URL displayed in the terminal, usually:
+
+http://localhost:5173
+
+Keep both terminals running while using the application.
+
+## 🔄 How It Works
+
+1. **User Interaction:** Customers visit the CookingBites website and enter their details in the reservation form.
 2. **Frontend Processing:** The React.js frontend collects the submitted information and sends a request to the backend API.
-3. **Backend Processing:** The Node.js and Express.js backend receives the reservation request and processes the data.
-4. **Database Storage:** MongoDB Atlas stores the reservation details for future access.
-5. **Response Handling:** The backend returns a response to the frontend, which informs the customer about the result of their reservation submission.
-   
-## 📚 API Documentation
+3. **Backend Processing:** The Express.js server receives the request and processes the reservation data.
+4. **Database Storage:** The backend stores the reservation details in MongoDB Atlas.
+5. **Response Handling:** The backend returns a response, and the frontend displays the result of the reservation submission.
 
-### Authentication Endpoints
-- POST /api/auth/register - Register a new user
-- POST /api/auth/login - Login user
-- GET /api/auth/me - Get current user
+## 🔌 API Overview
 
-### Reservation Endpoints
-- GET /api/reservations - Get all reservations
-- POST /api/reservations - Create new reservation
-- GET /api/reservations/:id - Get reservation by ID
-- PUT /api/reservations/:id - Update reservation
-- DELETE /api/reservations/:id - Delete reservation
+The backend exposes API routes for reservation-related operations. The exact endpoints and supported methods are defined in the backend route files.
 
-## 🤝 Contributing
+- **Reservation submission:** Sends reservation details to the backend.
+- **Reservation processing:** Validates and processes incoming reservation requests.
+- **Database integration:** Stores reservation records in MongoDB Atlas.
 
-We welcome contributions to improve the Restaurant Reservation System! Please follow these steps:
+Refer to the backend route and controller files for the implemented endpoints.
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+## 🔐 Security
 
-Please make sure to update tests as appropriate and adhere to the existing code style.
+- Store database credentials in environment variables.
+- Keep `config.env` out of version control.
+- Do not commit local database exports or files containing customer reservation data.
+- Configure MongoDB Atlas access permissions appropriately.
+
+## 🚧 Future Enhancements
+
+- Reservation status tracking
+- Email confirmations for successful reservations
+- Admin dashboard for managing bookings
+- Improved form validation and error handling
+- Reservation management and reporting
+
+## 📌 Repository
+
+**GitHub:** [CookingBites – Restaurant Reservation System](https://github.com/Meenamanya/CookingBites)
+
 
 
