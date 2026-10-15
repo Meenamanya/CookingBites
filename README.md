@@ -82,7 +82,7 @@ A full-stack web application for managing restaurant table reservations built wi
 
 1. Clone the repository
 ```bash
-git clone https://github.com/HARIHARANS24/restaurant-reservation-mern.git
+git clone https://github.com/meenamanya/restaurant-reservation-mern.git
 cd restaurant-reservation-mern
 ```
 
